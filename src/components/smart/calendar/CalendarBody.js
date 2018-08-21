@@ -6,7 +6,7 @@ export default class CalendarBody extends Component {
 
     render() {
         const columns = hours.map(({ start_hour, display_hour }) => (
-            <tr key={start_hour}>
+        <tr key={start_hour}>
                 <Row
                     displayHour={display_hour}
                     startHour={start_hour}
