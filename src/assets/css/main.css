@@ -15,14 +15,14 @@ body {
   font-weight: normal;
   font-style: normal; }
 
-  [draggable] {
+  /* [draggable] {
     -moz-user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
     user-select: none;
     -khtml-user-drag: element;
     -webkit-user-drag: element;
-  }
+  } */
 
 #timer {
   position: absolute;
@@ -103,7 +103,7 @@ body {
         width: 106px;
         height: 1716px; }
     #terminplaner .table .event {
-      /* position: absolute; */
+      position: absolute;
       cursor: move;
       width: 107px;
       border: 1px solid white;
