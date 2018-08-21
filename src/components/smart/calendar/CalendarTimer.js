@@ -16,10 +16,12 @@ export default class CalendarTimer extends Component {
     }
 
     moveTimer = () => {
+        const setMinutes = new Date().toTimeString().slice(3, 5)
+        const setHours = new Date().toTimeString().slice(0, 2)
         if(this.state.marginTop === 132) {
-            this.setState({ marginTop: 0 })
+            this.setState({ marginTop: 0, hour: setHours, minutes: setMinutes })
         } else {
-            this.setState(prevState => ({ marginTop: prevState.marginTop + 2.2 }))
+            this.setState(prevState => ({ marginTop: prevState.marginTop + 2.2,  hour: setHours, minutes: setMinutes }))
         }        
     }
 
