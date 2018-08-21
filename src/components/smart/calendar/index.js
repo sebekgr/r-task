@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-import CalendarHeader from '../dump/CalendarHeader'
-import CalendarEventsWrapper from '../dump/CalendarEventsWrapper'
-import calendarData from '../../data/calendarData'
-import CalendarEventTile from '../dump/CalendarEventTile'
-import CalendarBody from '../dump/CalendarBody'
+import CalendarHeader from '../../dump/calendar/CalendarHeader'
+import calendarData from '../../../data/calendarData'
+import CalendarBody from './CalendarBody'
 
 
 export default class Calendar extends Component {
@@ -14,9 +12,7 @@ export default class Calendar extends Component {
         return (
             <div id="terminplaner">
                 <CalendarHeader />
-                <div className="table">
-                    <CalendarEventsWrapper 
-                        />
+				<div className="table">
 				<table>
 					<thead>
 						<tr>
@@ -31,10 +27,10 @@ export default class Calendar extends Component {
 						</tr>
 					</thead>
 					<CalendarBody 
-                        />
+                        eventData={this.state.calendarData[0]}/>
 				</table>
+				</div>
 			</div>
-            </div>
         )
     }
 }
